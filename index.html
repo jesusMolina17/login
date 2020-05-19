@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SignUp and Login</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="container" id="container">
+<div class="form-container sign-up-container">
+
+<form action="">
+	<h2>Crear Una Cuenta</h2>
+	<br>
+	<hr>
+	
+	<input type="email" name="email" placeholder="Ingrese Email">
+	<input type="text" name="nombre" placeholder="Ingrese Usuario">
+	<input type="password" name="password" placeholder="Ingrese Password">
+	<select name="select">
+		<option >-Seleccione Un Tipo De Usuario-</option> 
+		<option value="1">Restaurante</option>
+		<option value="2">Manipulador</option>
+		<option value="3">Cliente</option>
+	</select>
+	<br><br>
+	<button>Registar</button>
+</form>
+</div>
+<div class="form-container sign-in-container">
+	<form action="#">
+		
+			<h2>Iniciar sesión</h2>
+<br>
+<hr>
+	<input type="email" name="email" placeholder="Email">
+	<input type="password" name="password" placeholder="Password">
+	<br><br>
+
+	<button>login</button>
+	</form>
+</div>
+<div class="overlay-container">
+	<div class="overlay">
+		<div class="overlay-panel overlay-left">
+			<img src="img/my food.png" alt="" width="90" height="70" >
+			<br>
+			<h1>Bienvenido</h1>
+			<p>
+				Para mantenerse conectado con nosotros, inicie sesión.</p>
+			<button class="ghost" id="signIn">login</button>
+		</div>
+		<div class="overlay-panel overlay-right">
+			<img src="img/my food.png" alt="" width="90" height="70" >
+			<h2>Hola, que esperas para usar My Food ?</h2>
+			
+			<p>Si no tienes cuenta puedes registarte, es muy facil.</p>
+			<button class="ghost" id="signUp">
+				Regístrate</button>
+		</div>
+	</div>
+</div>
+</div>
+
+<script type="text/javascript">
+	const signUpButton = document.getElementById('signUp');
+	const signInButton = document.getElementById('signIn');
+	const container = document.getElementById('container');
+
+	signUpButton.addEventListener('click', () => {
+		container.classList.add("right-panel-active");
+	});
+	signInButton.addEventListener('click', () => {
+		container.classList.remove("right-panel-active");
+	});
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
